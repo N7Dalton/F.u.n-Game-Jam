@@ -19,7 +19,7 @@ public class cLOSEdOOR : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        door.transform.Rotate(0, -90, 0);
+        door.transform.Rotate(120, 0, 0);
         slam.Play();
     }
 }

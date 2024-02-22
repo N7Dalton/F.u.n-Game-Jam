@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class EatFood : MonoBehaviour
 {
-    public float Doorlevel;
-   
-   
-    public GameObject door;
+    public GameMan gamemanScript;
     // Start is called before the first frame update
     void Start()
     {
-        Doorlevel = 0f;
+        
     }
 
     // Update is called once per frame
@@ -20,8 +16,8 @@ public class Door : MonoBehaviour
     {
         
     }
-   
-  
-   
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
 }

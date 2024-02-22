@@ -11,7 +11,7 @@ public class TouchingDoor : MonoBehaviour
     public Animator playeranimator;
     public TextMeshProUGUI textMeshProUGUI;
     public string[] strings;
-    public Door doorScript;
+    public float doorlevl = 0f;
     public GameObject dadsleepin;
     public GameObject dadchasin;
     public GameObject dorr;
@@ -19,26 +19,80 @@ public class TouchingDoor : MonoBehaviour
     public AudioSource buildUpSound;
     void OnTriggerEnter()
     {
-        if(doorScript.Doorlevel <= 6f)
+        if(doorlevl <= 6f)
         {
+            doorlevl++;
             BOOM.Play();
             Dadanimator.Play("DadMadAnim");
-            StartCoroutine(doorScript.LevelUpDoor());
+            dorr.transform.Rotate(-7, 0, 0);
+
             textMeshProUGUI.text = RandomString();
         }
-       else if(doorScript.Doorlevel == 7f)
+       else if(doorlevl == 7f)
         {
             buildUpSound.Play();
-            StartCoroutine(doorScript.LevelUpDoor());
-            dorr.transform.Rotate(0, 90, 0);
-            Debug.Log("rotate dorr");
+            dorr.transform.Rotate(-70, 0, 0);
+            dorr.transform.Rotate(-7, 0, 0);
+            StartCoroutine("LevelUpDoor");
+            BOOM.Play();
+            BOOM.Play();
             dadsleepin.SetActive(false);
             dadchasin.SetActive(true);
+
         }
        
     }
     public string RandomString()
     {
         return strings[Random.Range(0, strings.Length )];
+    }
+    public IEnumerator LevelUpDoor()
+    {
+
+        if (doorlevl == 1f)
+        {
+
+
+           
+            yield return null;
+        }
+        if (doorlevl == 2f)
+        {
+
+            transform.Rotate(-7, 0, 0);
+            yield return null;
+        }
+        if (doorlevl == 3f)
+        {
+
+            transform.Rotate(-7, 0, 0);
+            yield return null;
+        }
+        if (doorlevl == 4f)
+        {
+
+            transform.Rotate(-7, 0, 0);
+            yield return null;
+        }
+        if (doorlevl == 5f)
+        {
+
+            transform.Rotate(-7, 0, 0);
+            yield return null;
+        }
+        if (doorlevl == 6f)
+        {
+
+
+            transform.Rotate(-7, 0, 0);
+            yield return null;
+        }
+        if (doorlevl == 7f)
+        {
+
+           
+            yield return null;
+        }
+
     }
 }

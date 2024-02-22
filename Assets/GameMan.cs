@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class GameMan : MonoBehaviour
 {
-    public float Doorlevel;
-   
-   
-    public GameObject door;
+    bool HasEaten = false;
     // Start is called before the first frame update
     void Start()
     {
-        Doorlevel = 0f;
+        
     }
 
     // Update is called once per frame
@@ -20,8 +16,4 @@ public class Door : MonoBehaviour
     {
         
     }
-   
-  
-   
-    
 }
