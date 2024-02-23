@@ -5,8 +5,8 @@ using UnityEngine;
 public class EatFood : MonoBehaviour
 {
     public GameMan gamemanScript;
-    public GameObject PlateWFood;
-    public GameObject PlateWOFood;
+    public AudioSource Chomp;
+    public GameObject Food;
     public Animator animator;
     // Start is called before the first frame update
     void Start()
@@ -29,8 +29,8 @@ public class EatFood : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             animator.Play("txt2");
-            PlateWFood.SetActive(false);
-            PlateWOFood.SetActive(true);
+            Chomp.Play();
+            Food.SetActive(false);
             gamemanScript.HasEaten = true;
         }
     }

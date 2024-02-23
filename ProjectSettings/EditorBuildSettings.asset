@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/GetDisplay.unity
+    guid: d89717de3645e4b489ba276751a32cd5
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/GoodEndingScene.unity
+    guid: 6246432ec09e83a4a8181bb86005e2a8
+  - enabled: 1
+    path: Assets/Scenes/DayChanger.unity
+    guid: 7b7e612b322e53743844ca9be9bb405f
   m_configObjects: {}

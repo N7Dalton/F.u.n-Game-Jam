@@ -27,7 +27,7 @@ public class Sleep : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E) && gameman.HasEaten == true)
         {
-            SceneManager.LoadScene(SceneManager.sceneCount + 1);
+            SceneManager.LoadScene("DayChanger");
         }
     }
 }
