@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameMan : MonoBehaviour
 {
-    bool HasEaten = false;
+     public bool HasEaten = false;
     // Start is called before the first frame update
     void Start()
     {
